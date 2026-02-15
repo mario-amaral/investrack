@@ -218,14 +218,17 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <div className="header-info">
-          <h1 className="text-gradient">Investrack</h1>
-          <p style={{ color: 'var(--text-secondary)' }}>Acompanhe o seu património familiar.</p>
+        <div className="header-info" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+          <img src="/assets/logo.png" alt="Investrack Logo" style={{ width: '64px', height: '64px', borderRadius: '14px', border: '1px solid var(--glass-border)', boxShadow: 'var(--shadow)' }} />
+          <div>
+            <h1 className="text-gradient">Investrack</h1>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>O seu património, simplificado.</p>
+          </div>
         </div>
         <div className="header-actions">
           <button className="secondary" onClick={() => setIsMembersModalOpen(true)}>Gerir Membros</button>
           <button className="secondary" onClick={() => setIsTypesModalOpen(true)}>Gerir Tipos</button>
-          <button className="btn-loan" onClick={() => { setEditingId(null); setIsLoanModalOpen(true); setNewLoan({ name: '', totalAmount: '', remainingAmount: '', assetValue: '', memberTag: householdMembers[0] || '' }) }}>+ Empréstimo</button>
+          <button className="btn-loan" onClick={() => { setEditingId(null); setIsLoanModalOpen(true); setNewLoan({ name: '', totalAmount: '', remainingAmount: '', assetValue: '', memberTag: householdMembers[0] || '', interestRate: '', monthlyPayment: '', maturityDate: '' }) }}>+ Empréstimo</button>
           <button onClick={() => { setEditingId(null); setIsAccountModalOpen(true); setNewAccount({ name: '', type: accountTypes[0], balance: '', memberTag: householdMembers[0] || '' }) }}>+ Conta</button>
         </div>
       </header>
