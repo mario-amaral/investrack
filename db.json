@@ -1,25 +1,18 @@
 {
     "accounts": [
         {
-            "id": 1,
             "name": "Main Brokerage",
             "type": "Brokerage",
-            "balance": 54200.50,
-            "memberTag": "Mario"
+            "balance": 54200.5,
+            "memberTag": "Sara",
+            "id": 1
         },
         {
             "id": 2,
             "name": "Roth IRA",
             "type": "Retirement",
-            "balance": 12800.00,
+            "balance": 12800,
             "memberTag": "Mario"
-        },
-        {
-            "id": 3,
-            "name": "Family Savings",
-            "type": "Savings",
-            "balance": 4500.25,
-            "memberTag": "Family"
         }
     ],
     "loans": [
@@ -29,7 +22,10 @@
             "totalAmount": 250000,
             "remainingAmount": 180000,
             "assetValue": 320000,
-            "memberTag": "Mario"
+            "memberTag": "Mario",
+            "interestRate": 3.5,
+            "monthlyPayment": 1150,
+            "maturityDate": "2045-12-01"
         }
     ],
     "accountTypes": [
@@ -38,5 +34,9 @@
         "Savings",
         "Crypto",
         "Checking"
+    ],
+    "householdMembers": [
+        "Mario",
+        "Sara"
     ]
 }

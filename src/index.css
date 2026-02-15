@@ -69,7 +69,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .header-actions {
     width: 100%;
   }
@@ -108,7 +108,63 @@ body {
 }
 
 .stat-card {
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.hero-card {
+  padding: var(--spacing-sm);
+}
+
+.hero-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.card-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.card-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.action-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.1rem;
+  padding: 0;
+}
+
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.action-btn.edit:hover {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.action-btn.delete:hover {
+  color: var(--danger);
+  border-color: var(--danger);
 }
 
 .badge {
@@ -149,8 +205,7 @@ form {
   gap: 0.5rem;
 }
 
-input,
-select {
+input {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-sm);
@@ -158,6 +213,23 @@ select {
   color: white;
   font-family: inherit;
   font-size: 1rem;
+}
+
+select {
+  background: #1e293b;
+  /* Solid dark background */
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+select option {
+  background: #1e293b;
+  color: white;
 }
 
 input:focus,
