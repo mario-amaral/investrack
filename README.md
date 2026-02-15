@@ -1,6 +1,6 @@
 # Investrack 📈
 
-Investrack é uma aplicação web premium para acompanhamento de património familiar. Desenvolvida para ser simples, rápida e privada, permite-lhe gerir todas as suas contas financeiras e empréstimos num único dashboard centralizado, acessível em qualquer dispositivo da sua rede doméstica.
+Investrack é uma aplicação web para gerir património familiar. Desenvolvida para ser simples, rápida e privada, permite-lhe gerir todas as suas contas financeiras e empréstimos num único dashboard centralizado, acessível em qualquer dispositivo da sua rede doméstica.
 
 ![Aesthetic](https://img.shields.io/badge/Design-Glassmorphism-purple)
 ![Responsive](https://img.shields.io/badge/UI-Mobile--Friendly-blue)
@@ -66,7 +66,3 @@ A aplicação estará disponível em:
 ## 🗄️ Estrutura de Dados
 Os seus dados são privados e nunca saem da sua rede. São guardados em:
 `investrack/db.json`
-
----
-
-*Enjoy tracking your family wealth with privacy and style!* 🥂
