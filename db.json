@@ -1,0 +1,42 @@
+{
+    "accounts": [
+        {
+            "id": 1,
+            "name": "Main Brokerage",
+            "type": "Brokerage",
+            "balance": 54200.50,
+            "memberTag": "Mario"
+        },
+        {
+            "id": 2,
+            "name": "Roth IRA",
+            "type": "Retirement",
+            "balance": 12800.00,
+            "memberTag": "Mario"
+        },
+        {
+            "id": 3,
+            "name": "Family Savings",
+            "type": "Savings",
+            "balance": 4500.25,
+            "memberTag": "Family"
+        }
+    ],
+    "loans": [
+        {
+            "id": 101,
+            "name": "Crédito Habitação",
+            "totalAmount": 250000,
+            "remainingAmount": 180000,
+            "assetValue": 320000,
+            "memberTag": "Mario"
+        }
+    ],
+    "accountTypes": [
+        "Brokerage",
+        "Retirement",
+        "Savings",
+        "Crypto",
+        "Checking"
+    ]
+}
