@@ -218,11 +218,11 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <div className="header-info" style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
-          <img src="/assets/logo.png" alt="Investrack Logo" style={{ width: '64px', height: '64px', borderRadius: '14px', border: '1px solid var(--glass-border)', boxShadow: 'var(--shadow)' }} />
+        <div className="header-info" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <img src="/assets/logo.svg" alt="Investrack Logo" className="app-logo" />
           <div>
             <h1 className="text-gradient">Investrack</h1>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>O seu património, simplificado.</p>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>Património da família Pinho Amaral</p>
           </div>
         </div>
         <div className="header-actions">

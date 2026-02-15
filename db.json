@@ -1,42 +1,40 @@
 {
-    "accounts": [
-        {
-            "name": "Main Brokerage",
-            "type": "Brokerage",
-            "balance": 54200.5,
-            "memberTag": "Sara",
-            "id": 1
-        },
-        {
-            "id": 2,
-            "name": "Roth IRA",
-            "type": "Retirement",
-            "balance": 12800,
-            "memberTag": "Mario"
-        }
-    ],
-    "loans": [
-        {
-            "id": 101,
-            "name": "Crédito Habitação",
-            "totalAmount": 250000,
-            "remainingAmount": 180000,
-            "assetValue": 320000,
-            "memberTag": "Mario",
-            "interestRate": 3.5,
-            "monthlyPayment": 1150,
-            "maturityDate": "2045-12-01"
-        }
-    ],
-    "accountTypes": [
-        "Brokerage",
-        "Retirement",
-        "Savings",
-        "Crypto",
-        "Checking"
-    ],
-    "householdMembers": [
-        "Mario",
-        "Sara"
-    ]
+  "accounts": [
+    {
+      "name": "Main Brokerage",
+      "type": "Brokerage",
+      "balance": 54200.5,
+      "memberTag": "Sara",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Roth IRA",
+      "type": "Retirement",
+      "balance": 12800,
+      "memberTag": "Mario"
+    }
+  ],
+  "loans": [
+    {
+      "name": "Crédito Habitação",
+      "totalAmount": 250000,
+      "remainingAmount": 180000,
+      "assetValue": 320000,
+      "memberTag": "Família",
+      "id": 101
+    }
+  ],
+  "accountTypes": [
+    "Brokerage",
+    "Retirement",
+    "Savings",
+    "Crypto",
+    "Checking"
+  ],
+  "householdMembers": [
+    "Mario",
+    "Sara",
+    "Família"
+  ]
 }

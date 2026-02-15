@@ -6,8 +6,10 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
-  --accent-primary: #8b5cf6;
-  --accent-secondary: #d946ef;
+  --accent-primary: #facc15;
+  /* Yellow-400 */
+  --accent-secondary: #eab308;
+  /* Yellow-500 */
   --success: #10b981;
   --danger: #ef4444;
 
@@ -58,6 +60,12 @@ body {
   margin-bottom: 0.25rem;
 }
 
+.app-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
 .header-actions {
   display: flex;
   gap: 1rem;
@@ -84,11 +92,21 @@ body {
   .header-info h1 {
     font-size: 2rem;
   }
+
+  .app-logo {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 @media (max-width: 480px) {
   .header-actions button {
     min-width: 100%;
+  }
+
+  .app-logo {
+    width: 64px;
+    height: 64px;
   }
 }
 
@@ -177,7 +195,8 @@ body {
 
 .badge-member {
   background: var(--accent-primary);
-  color: white;
+  color: #0f172a;
+  /* Dark text for better contrast on yellow */
 }
 
 h1,
@@ -242,11 +261,12 @@ select:focus {
 
 button {
   background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
-  color: white;
+  color: #0f172a;
+  /* Dark text for better contrast on yellow */
   border: none;
   border-radius: var(--radius-sm);
   padding: 0.75rem 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
@@ -256,12 +276,20 @@ button:hover {
 }
 
 button.btn-loan {
-  background: linear-gradient(to right, #06b6d4, #3b82f6);
+  background: linear-gradient(to right, #f59e0b, #d97706);
+  /* Amber/Orange yellow */
+  color: #0f172a;
 }
 
 button.secondary {
-  background: var(--card-bg);
-  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+}
+
+button.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-primary);
 }
 
 .modal-backdrop {
