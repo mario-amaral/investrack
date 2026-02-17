@@ -52,7 +52,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: auto;
+  margin-bottom: var(--spacing-lg);
   gap: var(--spacing-md);
 }
 
@@ -87,8 +87,8 @@ body {
   .header-actions button {
     flex: 1;
     min-width: calc(50% - 0.5rem);
-    padding: 0.75rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 0.6rem;
+    font-size: 0.85rem;
   }
 
   .header-info h1 {
@@ -190,7 +190,7 @@ body {
 .badge {
   padding: 0.10rem 0.50rem;
   border-radius: 9999px;
-  font-size: 0.50rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -275,7 +275,7 @@ button {
   border-radius: var(--radius-sm);
   padding: 0.2rem 0.5rem;
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
@@ -319,26 +319,22 @@ button.secondary:hover {
   justify-content: center;
   z-index: 1000;
   backdrop-filter: blur(4px);
+  padding: 1rem;
 }
 
 .modal-content {
   width: 100%;
   max-width: 420px;
-  padding: 1.25rem;
+  max-height: calc(100vh - 2rem);
+  padding: 1.0rem;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
 .modal-content h2 {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
 
 .modal-content h3 {
-  font-size: 0.85rem;
-}
-
-.modal-content h2 {
-  font-size: 1.1rem;
-}
-
-.modal-content h3 {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 }
