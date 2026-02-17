@@ -25,7 +25,7 @@ function App() {
   })
 
   const ACCOUNT_TYPES = ["Conta à ordem", "Poupança"]
-  const INVESTMENT_TYPES = ["Certificados Aforro", "ETF", "PPR", "Crypto"]
+  const INVESTMENT_TYPES = ["Certificados Aforro", "Fundo Investimento", "ETF", "PPR", "Crypto"]
 
   const [newLoan, setNewLoan] = useState({
     name: '',
@@ -86,6 +86,12 @@ function App() {
     }).format(value)
   }
 
+  const formatDate = (isoString) => {
+    if (!isoString) return 'N/A'
+    const date = new Date(isoString)
+    return date.toLocaleDateString('pt-PT')
+  }
+
   const accountsTotal = accounts.reduce((acc, curr) => acc + parseFloat(curr.balance || 0), 0)
   const loansEquity = loans.reduce((acc, curr) => acc + (parseFloat(curr.assetValue || 0) - parseFloat(curr.remainingAmount || 0)), 0)
   const totalNetWorth = accountsTotal + loansEquity
@@ -111,6 +117,7 @@ function App() {
         ...newAccount,
         balance: calculatedBalance,
         investments: finalizedInvestments,
+        updatedAt: new Date().toISOString(),
         id: editingId
       } : acc)
     } else {
@@ -118,6 +125,7 @@ function App() {
         ...newAccount,
         balance: calculatedBalance,
         investments: finalizedInvestments,
+        updatedAt: new Date().toISOString(),
         id: Date.now()
       }
       updatedAccounts = [...accounts, accountToAdd]
@@ -137,14 +145,15 @@ function App() {
 
     let updatedLoans
     if (editingId) {
-      updatedLoans = loans.map(loan => loan.id === editingId ? { ...newLoan, id: editingId, totalAmount: parseFloat(newLoan.totalAmount || 0), remainingAmount: parseFloat(newLoan.remainingAmount), assetValue: parseFloat(newLoan.assetValue) } : loan)
+      updatedLoans = loans.map(loan => loan.id === editingId ? { ...newLoan, id: editingId, totalAmount: parseFloat(newLoan.totalAmount || 0), remainingAmount: parseFloat(newLoan.remainingAmount), assetValue: parseFloat(newLoan.assetValue), updatedAt: new Date().toISOString() } : loan)
     } else {
       const loanToAdd = {
         ...newLoan,
         id: Date.now(),
         totalAmount: parseFloat(newLoan.totalAmount || 0),
         remainingAmount: parseFloat(newLoan.remainingAmount),
-        assetValue: parseFloat(newLoan.assetValue)
+        assetValue: parseFloat(newLoan.assetValue),
+        updatedAt: new Date().toISOString()
       }
       updatedLoans = [...loans, loanToAdd]
     }
@@ -342,6 +351,9 @@ function App() {
                   )
                 })()}
               </div>
+            </div>
+            <div style={{ marginTop: '0.75rem', paddingTop: '0.5rem', borderTop: '1px solid rgba(255, 255, 255, 0.1)', display: 'flex', justifyContent: 'flex-end' }}>
+              <span style={{ fontSize: '0.65rem', color: 'var(--text-secondary)' }}>Atualizado em: {formatDate(account.updatedAt)}</span>
             </div>
           </div>
         ))}

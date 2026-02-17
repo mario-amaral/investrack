@@ -11,6 +11,23 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = 3001;
 const DB_PATH = path.join(__dirname, 'db.json');
+const DB_SAMPLE_PATH = path.join(__dirname, 'db.sample.json');
+
+// Initialize DB if for some reason it's not present
+if (!fs.existsSync(DB_PATH)) {
+    console.log('Database not found. Initializing from sample...');
+    try {
+        if (fs.existsSync(DB_SAMPLE_PATH)) {
+            const sampleData = fs.readFileSync(DB_SAMPLE_PATH, 'utf-8');
+            fs.writeFileSync(DB_PATH, sampleData, 'utf-8');
+        } else {
+            console.error('Core failure: db.sample.json not found!');
+            fs.writeFileSync(DB_PATH, JSON.stringify({ accounts: [], loans: [], householdMembers: [] }, null, 2), 'utf-8');
+        }
+    } catch (error) {
+        console.error('Error initializing database:', error);
+    }
+}
 
 app.use(cors());
 app.use(bodyParser.json());

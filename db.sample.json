@@ -1,0 +1,53 @@
+{
+    "accounts": [
+        {
+            "name": "Main Checking",
+            "type": "Conta à ordem",
+            "balance": 2500.00,
+            "memberTag": "User 1",
+            "investments": [],
+            "updatedAt": "2026-02-17T10:00:00.000Z",
+            "id": 1
+        },
+        {
+            "name": "Emergency Fund",
+            "type": "Poupança",
+            "balance": 10000.00,
+            "memberTag": "User 1",
+            "investments": [],
+            "updatedAt": "2026-02-17T10:00:00.000Z",
+            "id": 2
+        },
+        {
+            "name": "Global Equity ETF",
+            "type": "ETF",
+            "balance": 15450.75,
+            "memberTag": "User 1",
+            "investments": [
+                {
+                    "amount": 10000.00,
+                    "currentValue": 15450.75,
+                    "date": "2023-01-15"
+                }
+            ],
+            "updatedAt": "2026-02-17T10:00:00.000Z",
+            "id": 1771325000000
+        }
+    ],
+    "loans": [
+        {
+            "name": "Mortgage",
+            "totalAmount": 200000.00,
+            "remainingAmount": 150000.00,
+            "assetValue": 250000.00,
+            "memberTag": "Family",
+            "updatedAt": "2026-02-17T10:00:00.000Z",
+            "id": 101
+        }
+    ],
+    "householdMembers": [
+        "User 1",
+        "User 2",
+        "Family"
+    ]
+}
