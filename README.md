@@ -61,8 +61,10 @@ A aplicação estará disponível em:
 *   **Local**: `http://localhost:5173`
 *   **Rede Wi-Fi**: `http://<IP-DO-HOST>:5173` ou `http://<HOSTNAME>.local:5173`
 
----
+## 🗄️ Estrutura de Dados e Privacidade
 
-## 🗄️ Estrutura de Dados
-Os seus dados são privados e nunca saem da sua rede. São guardados em:
-`investrack/db.json`
+Os seus dados pessoais são **estritamente privados** e nunca são carregados para o GitHub.
+
+- **`db.json`**: Este ficheiro contém os seus saldos reais e nomes de membros do agregado. Está listado no `.gitignore` e permanece apenas na sua máquina local.
+- **`db.sample.json`**: Um ficheiro de exemplo com dados fictícios que é incluído no repositório para demonstração.
+- **Inicialização Automática**: Ao executar a aplicação pela primeira vez, o servidor detecta a ausência de `db.json` e cria uma cópia local a partir do `db.sample.json`. A partir daí, todas as alterações são guardadas apenas no seu ficheiro local.
